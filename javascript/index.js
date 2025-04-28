@@ -55,6 +55,7 @@ getInstruction("mashedPotatoes",  0,
           (step4) => {
             document.querySelector("#mashedPotatoes").innerHTML += `<li>${step4}</li>`;
             document.querySelector("#mashedPotatoes").innerHTML += `<li>"Mashed potatoes are ready!!</li>`;
+            document.querySelector("#mashedPotatoesImg").style.display = 'block';
           },
           (e) => {
             console.log("Error in step 4", e);
@@ -116,6 +117,7 @@ return obtainInstruction("steak", 3)
         .then((step7) => {
           document.querySelector("#steak").innerHTML += `<li>${step7}</li>`;
           document.querySelector("#steak").innerHTML += `<li>"Steak is ready!!"</li>`;
+          document.querySelector("#steakImg").style.display = 'block';
           return obtainInstruction("steak", 8)
           })
 .catch((error) => {
@@ -150,6 +152,7 @@ document.querySelector("#broccoli").innerHTML += `<li>${step5}</li>`;
 const step6 = await obtainInstruction("broccoli",6)
 document.querySelector("#broccoli").innerHTML += `<li>${step6}</li>`;
 document.querySelector("#broccoli").innerHTML += `<li>"Broccoli is ready!!"</li>`;
+document.querySelector("#broccoliImg").style.display = 'block';
 } catch (e) {
   console.log('oops, something went wrong');
   console.log(e);
@@ -180,6 +183,7 @@ Promise.all([p1, p2, p3, p4, p5, p6, p7, p8])
   document.querySelector("#brusselsSprouts").innerHTML += `<li>${stepsArr[6]}</li>`;
   document.querySelector("#brusselsSprouts").innerHTML += `<li>${stepsArr[7]}</li>`;
   document.querySelector("#brusselsSprouts").innerHTML += `<li>"brusselsSprouts are ready!!"</li>`;
+  document.querySelector("#brusselsSproutsImg").style.display = 'block';
 
 
 })
